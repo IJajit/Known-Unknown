@@ -120,11 +120,11 @@
     }
 
     .poster-viewport[data-layer="red"] .poster-img {
-      filter: saturate(1.15) contrast(1.2);
+      filter: saturate(1.05) contrast(1.15);
     }
     .poster-viewport[data-layer="red"] .anaglyph-overlay {
       background-color: var(--color-red);
-      opacity: 1;
+      opacity: 0.90; /* Reduced vibrancy by 10% so red text remains subtly legible while leaves stand out */
     }
 
     .poster-viewport[data-layer="cyan"] .poster-img {
