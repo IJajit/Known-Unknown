@@ -1,0 +1,7 @@
+# Raw source print files and working layout files
+Poster v2.jpg
+layout-01.jpg
+layout-02.jpg
+Layout.ai
+*.tmp
+.DS_Store
