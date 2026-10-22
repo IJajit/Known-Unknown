@@ -120,11 +120,11 @@
     }
 
     .poster-viewport[data-layer="red"] .poster-img {
-      filter: saturate(1.1) contrast(1.15);
+      filter: saturate(1.05) contrast(1.1);
     }
     .poster-viewport[data-layer="red"] .anaglyph-overlay {
-      background-color: var(--color-red);
-      opacity: 1;
+      background-color: #ff3b30;
+      opacity: 0.72; /* Calibrated so cyan foliage layer grays out subtly instead of vanishing */
     }
 
     .poster-viewport[data-layer="cyan"] .poster-img {
@@ -1094,6 +1094,10 @@
 
     if (window.location.hash === '#breakdown') {
       showBreakdown();
+    } else if (window.location.hash === '#red') {
+      setLayer('red', document.getElementById('itemRed'));
+    } else if (window.location.hash === '#cyan') {
+      setLayer('cyan', document.getElementById('itemCyan'));
     }
 
     btnReadMore.addEventListener('click', () => {
