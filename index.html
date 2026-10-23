@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -731,260 +731,268 @@
             <h2 class="breakdown-title">What do the numbers represent?</h2>
           </div>
 
-          <ul class="bullet-list">
+                    <ul class="bullet-list">
             <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">"leaf" = [+0.284, -0.712, +0.441, ... ∈ ℝ⁷⁶⁸]</span>
-                <span class="bullet-meaning">— Models convert the concept of "leaf" into a 768-dimensional coordinate vector. Its biological attributes, shape, and context are encoded in this list of numbers.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">"green" = [-0.142, +0.841, +0.284, ... ∈ ℝ⁷⁶⁸]</span>
-                <span class="bullet-meaning">— The visual and chromatic property of greenness encoded as a coordinate vector in the same latent space.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">"vein" = [+0.198, -0.642, +0.514, ... ∈ ℝ⁷⁶⁸]</span>
-                <span class="bullet-meaning">— The vascular structure of a leaf. Notice how its coordinates are numerically very close to "leaf" (+0.198 vs +0.284, -0.642 vs -0.712), proving mathematically that AI knows they belong together.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">"canopy" = [+0.388, -0.614, +0.590, ... ∈ ℝ⁷⁶⁸]</span>
-                <span class="bullet-meaning">— The collective umbrella of leaves and branches before falling, situated in the upper foliage coordinate region.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">spatial_manifold: PCA_dim[1, 2, 3]</span>
-                <span class="bullet-meaning">— Declares the mathematical technique used (Principal Component Analysis) to project 768-D coordinates down to 3 spatial axes: Dimension 1 (X), Dimension 2 (Y), and Dimension 3 (Z).</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("tree") = [X:+0.405, Y:-0.512, Z:+0.781]</span>
-                <span class="bullet-meaning">— The (X, Y, Z) location of the tree in this 3D concept space.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("branch") = [X:+0.421, Y:-0.310, Z:+0.702]</span>
-                <span class="bullet-meaning">— The 3D location of the branch, sitting right next to pos("tree") on the coordinate grid.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("chlorophyll") = [X:-0.194, Y:+0.882, Z:+0.310]</span>
-                <span class="bullet-meaning">— Chlorophyll's 3D coordinate. Notice its high positive Y coordinate (+0.882), which aligns with pos("green") (Y=+0.841).</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("green") = [X:-0.142, Y:+0.841, Z:+0.284]</span>
-                <span class="bullet-meaning">— The 3D coordinate for green, grouping with chlorophyll.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("nature") = [X:+0.352, Y:-0.481, Z:+0.624]</span>
-                <span class="bullet-meaning">— The broader semantic category encompassing leaves, branches, and trees.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("foliage") = [X:+0.261, Y:-0.690, Z:+0.412]</span>
-                <span class="bullet-meaning">— Foliage positioned right alongside pos("leaf").</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("vein") = [X:+0.198, Y:-0.642, Z:+0.514]</span>
-                <span class="bullet-meaning">— The internal leaf vein positioned inside the leaf cluster.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("shadow") = [X:-0.582, Y:-0.410, Z:+0.104]</span>
-                <span class="bullet-meaning">— Shadow occupies negative coordinates, reflecting that it is the absence of light.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">pos("sky") = [X:-0.512, Y:+0.104, Z:-0.689]</span>
-                <span class="bullet-meaning">— Atmospheric background coordinates, clearly separated from the biological plant cluster.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cluster_centroid: [X:+0.312, Y:-0.594, Z:+0.528]</span>
-                <span class="bullet-meaning">— The mathematical center of mass (average position) of the entire foliage and leaf cluster in 3D space.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cos_sim("sun", "light") = 0.942 [aligned]</span>
-                <span class="bullet-meaning">— The angle between "sun" and "light" is only ≈19°. The model understands they are virtually inseparable in meaning.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cos_sim("leaf", "chlorophyll") = 0.918 [cluster]</span>
-                <span class="bullet-meaning">— High cosine similarity (0.918) proves the AI understands that chlorophyll is the essential pigment inside a leaf.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cos_sim("leaf", "foliage") = 0.964 [synonym]</span>
-                <span class="bullet-meaning">— A score of 0.964 indicates the AI treats "foliage" and "leaf" as almost perfect synonyms.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cos_sim("chlorophyll", "green") = 0.931 [color]</span>
-                <span class="bullet-meaning">— Connects the chemical molecule to its visual sensory color property.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">cos_sim("sun", "shadow") = -0.782 [opposite]</span>
-                <span class="bullet-meaning">— A negative score (≈141° angle) shows the AI understands that light and shadow point in opposite conceptual directions.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">dist("sun", "light") = 0.098 [co-located]</span>
-                <span class="bullet-meaning">— Very tight proximity in concept space.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">orthogonality("sky", "wood") = 0.041 [independent]</span>
-                <span class="bullet-meaning">— Two vectors at 90° to each other have a dot product near 0.0. Sky and wood are semantically independent concepts.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">vec("tree") - vec("trunk") ≈ vec("canopy")</span>
-                <span class="bullet-meaning">— Demonstrates vector algebra. Subtracting the trunk from a tree vector leaves the foliage canopy.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">vec("foliage") + vec("light") ≈ vec("sunlit_leaf")</span>
-                <span class="bullet-meaning">— Shows how multi-modal vision models blend visual lighting conditions with object identity.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">dot_product(leaf · sun) = +0.841 [affinity]</span>
-                <span class="bullet-meaning">— The mathematical dot product (A · B) used by transformer attention heads to score how strongly one word relates to another.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">softmax_attn("sun" → "leaf") = 0.8942</span>
-                <span class="bullet-meaning">— The attention probability after applying the softmax function. When looking at the sun, the model assigns an 89.4% attention weight to the leaves it illuminates.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">softmax_attn("leaf" → "tree") = 0.9214</span>
-                <span class="bullet-meaning">— A 92.1% attention weight connecting the fallen leaf back to the tree.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">semantic_affinity("leaf" ↔ "nature") = 0.884</span>
-                <span class="bullet-meaning">— The contextual correlation score between the leaf and the broader natural environment.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">k_NN("leaf", k=3) = {foliage, stem, tree}</span>
-                <span class="bullet-meaning">— k-Nearest Neighbors. The 3 closest concepts to a leaf returned in coordinate space are foliage, stem, and tree.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
+              <span class="bullet-dot">&#8226;</span>
               <div class="bullet-content">
                 <span class="bullet-code">k_NN("sun", k=3) = {light, ray, solar}</span>
-                <span class="bullet-meaning">— The 3 closest concepts to sun are light, ray, and solar.</span>
+                <span class="bullet-meaning">&mdash; The 3 closest concepts to sun in latent space are light, ray, and solar.</span>
               </div>
             </li>
 
             <li class="bullet-item">
-              <span class="bullet-dot">•</span>
+              <span class="bullet-dot">&#8226;</span>
               <div class="bullet-content">
-                <span class="bullet-code">latent_cluster: {"tree", "branch", "stem"}</span>
-                <span class="bullet-meaning">— The structural wood cluster in the model's memory.</span>
+                <span class="bullet-code">pos("chlorophyll") = [X:-0.194, Y:+0.882, Z:+0.310]</span>
+                <span class="bullet-meaning">&mdash; Chlorophyll's 3D coordinate. Notice its high positive Y coordinate (+0.882), which aligns with pos("green") (Y=+0.841).</span>
               </div>
             </li>
 
             <li class="bullet-item">
-              <span class="bullet-dot">•</span>
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">vec("foliage") + vec("light") &asymp; vec("sunlit_leaf")</span>
+                <span class="bullet-meaning">&mdash; Shows how multi-modal vision models blend visual lighting conditions with object identity.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cos_sim("sun", "shadow") = -0.782 [opposite]</span>
+                <span class="bullet-meaning">&mdash; A negative score (&asymp;141&deg; angle) shows the AI understands that light and shadow point in opposite conceptual directions.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("foliage") = [X:+0.261, Y:-0.690, Z:+0.412]</span>
+                <span class="bullet-meaning">&mdash; Foliage positioned right alongside pos("leaf").</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">softmax_attn("leaf" &rarr; "tree") = 0.9214</span>
+                <span class="bullet-meaning">&mdash; A 92.1% attention weight connecting the fallen leaf back to the tree.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cos_sim("leaf", "chlorophyll") = 0.918 [cluster]</span>
+                <span class="bullet-meaning">&mdash; High cosine similarity (0.918) proves the AI understands that chlorophyll is the essential pigment inside a leaf.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("branch") = [X:+0.421, Y:-0.310, Z:+0.702]</span>
+                <span class="bullet-meaning">&mdash; The 3D location of the branch, sitting right next to pos("tree") on the coordinate grid.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">spatial_manifold: PCA_dim[1, 2, 3]</span>
+                <span class="bullet-meaning">&mdash; Declares the mathematical technique used (Principal Component Analysis) to project 768-D coordinates down to 3 spatial axes: Dimension 1 (X), Dimension 2 (Y), and Dimension 3 (Z).</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">vec("tree") - vec("trunk") &asymp; vec("canopy")</span>
+                <span class="bullet-meaning">&mdash; Demonstrates vector algebra. Subtracting the trunk from a tree vector leaves the foliage canopy.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("tree") = [X:+0.405, Y:-0.512, Z:+0.781]</span>
+                <span class="bullet-meaning">&mdash; The (X, Y, Z) location of the tree in this 3D concept space.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
               <div class="bullet-content">
                 <span class="bullet-code">latent_cluster: {"sun", "light", "sky"}</span>
-                <span class="bullet-meaning">— The celestial/atmospheric lighting cluster.</span>
+                <span class="bullet-meaning">&mdash; The celestial/atmospheric lighting cluster in the model's associative memory.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">dot_product(leaf &middot; sun) = +0.841 [affinity]</span>
+                <span class="bullet-meaning">&mdash; The mathematical dot product (A &middot; B) used by transformer attention heads to score how strongly one word relates to another.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("sky") = [X:-0.512, Y:+0.104, Z:-0.689]</span>
+                <span class="bullet-meaning">&mdash; Atmospheric background coordinates, clearly separated from the biological plant cluster.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("nature") = [X:+0.352, Y:-0.481, Z:+0.624]</span>
+                <span class="bullet-meaning">&mdash; The broader semantic category encompassing leaves, branches, and trees.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">softmax_attn("sun" &rarr; "leaf") = 0.8942</span>
+                <span class="bullet-meaning">&mdash; The attention probability after applying the softmax function. When looking at the sun, the model assigns an 89.4% attention weight to the leaves it illuminates.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">"leaf" = [+0.284, -0.712, +0.441, ... &isin; &#8477;&#8311;&#8310;&#8312;]</span>
+                <span class="bullet-meaning">&mdash; Models convert the concept of "leaf" into a 768-dimensional coordinate vector. Its biological attributes, shape, and context are encoded in this list of numbers.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">orthogonality("sky", "wood") = 0.041 [independent]</span>
+                <span class="bullet-meaning">&mdash; Two vectors at 90&deg; to each other have a dot product near 0.0. Sky and wood are semantically independent concepts.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">latent_cluster: {"tree", "branch", "stem"}</span>
+                <span class="bullet-meaning">&mdash; The structural wood cluster in the model's memory.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cos_sim("leaf", "foliage") = 0.964 [synonym]</span>
+                <span class="bullet-meaning">&mdash; A score of 0.964 indicates the AI treats "foliage" and "leaf" as almost perfect synonyms.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">dist("leaf", "chlorophyll") = 0.184 [linked]</span>
+                <span class="bullet-meaning">&mdash; Euclidean distance metric confirming chlorophyll and leaf sit in direct proximity in latent space.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cluster_centroid: [X:+0.312, Y:-0.594, Z:+0.528]</span>
+                <span class="bullet-meaning">&mdash; The mathematical center of mass (average position) of the entire foliage and leaf cluster in 3D space.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">dist("sun", "light") = 0.098 [co-located]</span>
+                <span class="bullet-meaning">&mdash; Very tight proximity in concept space.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">"vein" = [+0.198, -0.642, +0.514, ... &isin; &#8477;&#8311;&#8310;&#8312;]</span>
+                <span class="bullet-meaning">&mdash; The vascular structure of a leaf. Notice how its coordinates are numerically very close to "leaf" (+0.198 vs +0.284, -0.642 vs -0.712), proving mathematically that AI knows they belong together.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cos_sim("chlorophyll", "green") = 0.931 [color]</span>
+                <span class="bullet-meaning">&mdash; Connects the chemical molecule to its visual sensory color property.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">dist("vein", "stem") = 0.092 [connected]</span>
+                <span class="bullet-meaning">&mdash; Proves the direct vascular connection between leaf veins and the branch stem in coordinate space.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("green") = [X:-0.142, Y:+0.841, Z:+0.284]</span>
+                <span class="bullet-meaning">&mdash; The 3D coordinate for green, grouping with chlorophyll.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">cos_sim("sun", "light") = 0.942 [aligned]</span>
+                <span class="bullet-meaning">&mdash; The angle between "sun" and "light" is only &asymp;19&deg;. The model understands they are virtually inseparable in meaning.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("vein") = [X:+0.198, Y:-0.642, Z:+0.514]</span>
+                <span class="bullet-meaning">&mdash; The internal leaf vein positioned inside the leaf cluster.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">k_NN("leaf", k=3) = {foliage, stem, tree}</span>
+                <span class="bullet-meaning">&mdash; k-Nearest Neighbors. The 3 closest concepts to a leaf returned in coordinate space are foliage, stem, and tree.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">"canopy" = [+0.388, -0.614, +0.590, ... &isin; &#8477;&#8311;&#8310;&#8312;]</span>
+                <span class="bullet-meaning">&mdash; The collective umbrella of leaves and branches before falling, situated in the upper foliage coordinate region.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">pos("shadow") = [X:-0.582, Y:-0.410, Z:+0.104]</span>
+                <span class="bullet-meaning">&mdash; Shadow occupies negative coordinates, reflecting that it is the absence of light.</span>
+              </div>
+            </li>
+
+            <li class="bullet-item">
+              <span class="bullet-dot">&#8226;</span>
+              <div class="bullet-content">
+                <span class="bullet-code">"green" = [-0.142, +0.841, +0.284, ... &isin; &#8477;&#8311;&#8310;&#8312;]</span>
+                <span class="bullet-meaning">&mdash; The visual and chromatic property of greenness encoded as a coordinate vector in the same latent space.</span>
               </div>
             </li>
           </ul>
