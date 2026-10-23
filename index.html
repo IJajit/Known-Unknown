@@ -91,7 +91,7 @@
     .poster-viewport {
       position: relative;
       width: 100%;
-      aspect-ratio: 9933 / 15224;
+      aspect-ratio: 785 / 1024;
       box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08);
       border-radius: 2px;
       overflow: hidden;
@@ -534,7 +534,7 @@
         max-width: calc(100vw - 2rem);
         height: auto;
         max-height: 82svh;
-        aspect-ratio: 9933 / 15224;
+        aspect-ratio: 785 / 1024;
       }
 
       .poster-viewport .poster-img {
@@ -889,22 +889,6 @@
               <div class="bullet-content">
                 <span class="bullet-code">cos_sim("sun", "shadow") = -0.782 [opposite]</span>
                 <span class="bullet-meaning">— A negative score (≈141° angle) shows the AI understands that light and shadow point in opposite conceptual directions.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">dist("leaf", "tree") = 0.142 [close]</span>
-                <span class="bullet-meaning">— Euclidean distance. A small distance confirms they sit in the same local neighborhood.</span>
-              </div>
-            </li>
-
-            <li class="bullet-item">
-              <span class="bullet-dot">•</span>
-              <div class="bullet-content">
-                <span class="bullet-code">dist("tree", "branch") = 0.118 [substructure]</span>
-                <span class="bullet-meaning">— An even shorter distance (0.118) reflecting a direct part-to-whole physical relationship.</span>
               </div>
             </li>
 
